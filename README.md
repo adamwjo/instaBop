@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# React Component Lifecycle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- For class components that extend React.Component
+  - When should you use class components vs functional components?
 
-## Available Scripts
+## Class Components
 
-In the project directory, you can run:
+- you can have state
+- you have lifecycle Methods
+- Container components tend to be class
+  - more like or going to contain state
 
-### `npm start`
+## Functional Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Start off making your component functional -> refactor to class if needed
+- Presentational components tend to be functional (dumb components)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Available Methods
 
-### `npm test`
+- http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+- https://reactjs.org/docs/react-component.html
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Task Lister
 
-### `npm run build`
+- Walk through
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Lifecycle Methods only for class components
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Creation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `componentDidMount()`
+- fetch
+- add extra event listeners
+- set up timers
+- things that require the DOM
 
-### `npm run eject`
+#### Setting Initial State using Props
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Update
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `render()`
+- has a return value
+- don't update state here
+- `componentDidUpdate()`
+- fetch maybe?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Deletion
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `componentWillUnmount()`
+- called right before element is removed from DOM
+- clean up things from componentDidMount
 
-## Learn More
+#### Where to put fetch?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- ComponentDidMount
+- ComponentDidUpdate
+- Event handlers
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### React Hooks?
 
-### Code Splitting
+### Less used methods
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `shouldComponentUpdate()`
+- `getDerivedStateFromProps()`
+- `getSnapshotBeforeUpdate()`
 
-### Analyzing the Bundle Size
+### Deprecated Methods
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- `componentWillMount()`
+- `componentWillReceiveProps()`
+- `componentWillUpdate()`
