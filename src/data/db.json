@@ -1,0 +1,29 @@
+{
+    "comments": [
+        {
+            "id": 1,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "username": "joeshmo"
+        },
+        {
+            "id": 2,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "username": "susie"
+        },
+        {
+            "id": 3,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "username": "coolpeep"
+        },
+        {
+            "id": 4,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "username": "nother1"
+        },
+        {
+            "id": 5,
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+            "username": "sasssy"
+        }
+    ]
+}
